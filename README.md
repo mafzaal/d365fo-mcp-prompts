@@ -16,9 +16,9 @@ The D365FO Client & MCP server is a powerful integration tool that enables direc
 
 ### Video Demo
 
-[![D365FO MCP Server Demo](https://img.youtube.com/vi/nYW8e9iFgsA/0.jpg)](https://www.youtube.com/watch?v=nYW8e9iFgsA)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nYW8e9iFgsA" title="D365FO MCP Server Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-*Click the image above to watch a demonstration of the D365FO MCP Server in action*
+*Watch a demonstration of the D365FO MCP Server in action*
 
 ### Architecture Overview
 
