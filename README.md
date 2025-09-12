@@ -2,6 +2,7 @@
 
 A demonstration of the Microsoft Dynamics 365 Finance & Operations Model Context Protocol (MCP) server integration with VS Code and GitHub Copilot.
 
+
 ## 1. Introduction & Architecture
 
 ### What is D365FO Client MCP?
@@ -12,6 +13,12 @@ The D365FO Client & MCP server is a powerful integration tool that enables direc
 - **Metadata Discovery**: Explore entity schemas, enumerations, and available actions
 - **Real-time Operations**: Perform CRUD operations on D365FO data in real-time
 - **Intelligent Assistance**: AI-powered suggestions and automation for D365FO development tasks
+
+### Video Demo
+
+[![D365FO MCP Server Demo](https://img.youtube.com/vi/nYW8e9iFgsA/0.jpg)](https://www.youtube.com/watch?v=nYW8e9iFgsA)
+
+*Click the image above to watch a demonstration of the D365FO MCP Server in action*
 
 ### Architecture Overview
 
