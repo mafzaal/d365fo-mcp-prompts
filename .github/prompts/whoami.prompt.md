@@ -15,7 +15,7 @@ Get current user's identity, admin status, and detailed profile information from
 Start with the fastest method to get current user identity:
 
 ```
-Call: mcp_fno-mcp-serve_d365fo_call_action
+Call: d365fo_call_action
 Action: getCurrentUserDetails
 Entity: ApprovalUsers
 Binding: BoundToEntitySet
@@ -31,7 +31,7 @@ This returns JSON with:
 For additional role validation:
 
 ```
-Call: mcp_fno-mcp-serve_d365fo_call_action  
+Call: d365fo_call_action
 Action: ValidateCurrentUserRole
 Entity: DualWriteProjectConfigurations
 Binding: BoundToEntitySet
@@ -44,7 +44,7 @@ Returns boolean indicating if user has valid role permissions.
 Query comprehensive user data using the UserId from step 1:
 
 ```
-Call: mcp_fno-mcp-serve_d365fo_query_entities
+Call: d365fo_query_entities
 Entity: SystemUsers
 Filter: UserID eq '[USER_ID_FROM_STEP_1]'
 Select: ["UserID", "UserName", "PersonName", "Email", "Company", "Language", "Enabled", "AccountType", "PreferredTimeZone"]
@@ -54,7 +54,7 @@ Select: ["UserID", "UserName", "PersonName", "Email", "Company", "Language", "En
 Check if user is linked to a person record:
 
 ```
-Call: mcp_fno-mcp-serve_d365fo_query_entities
+Call: d365fo_query_entities
 Entity: PersonUsers  
 Filter: UserId eq '[USER_ID_FROM_STEP_1]'
 Select: ["UserId", "PersonName", "PersonPrimaryEmail", "UserEmail", "PartyNumber"]
@@ -64,7 +64,7 @@ Select: ["UserId", "PersonName", "PersonPrimaryEmail", "UserEmail", "PartyNumber
 Retrieve user's security role assignments:
 
 ```
-Call: mcp_fno-mcp-serve_d365fo_query_entities
+Call: d365fo_query_entities
 Entity: SecurityUserRoleAssociations
 Filter: UserId eq '[USER_ID_FROM_STEP_1]'
 Select: ["UserId", "SecurityRoleName", "SecurityRoleIdentifier", "AssignmentStatus"]
@@ -74,7 +74,7 @@ Select: ["UserId", "SecurityRoleName", "SecurityRoleIdentifier", "AssignmentStat
 Provide environment information:
 
 ```
-Call: mcp_fno-mcp-serve_d365fo_get_environment_info
+Call: d365fo_get_environment_info
 ```
 
 ## Output Format
