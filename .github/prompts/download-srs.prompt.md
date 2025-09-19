@@ -15,7 +15,7 @@ Use the following reference table to determine the correct controller and parame
 | `FreeTextInvoiceController` | `CustInvoiceJour` | `InvoiceId` | Invoice ID | Free Text Invoice |
 | `CustDebitCreditNoteController` | `CustInvoiceJour` | `InvoiceId` | Invoice ID | Customer Debit/Credit Note |
 | `SalesConfirmController` | `CustConfirmJour` | `ConfirmId` or `SalesId` | Confirmation/Sales ID | Sales Confirmation |
-| `PurchPurchaseOrderController` | `VendPurchOrderJour` | `PurchaseOrderId` | Purchase Order ID | Purchase Order |
+| `PurchPurchaseOrderController` | `VendPurchOrderJour` | `PurchId` | Purchase Order ID | Purchase Order Confirmation |
 
 ## Processing Instructions
 
