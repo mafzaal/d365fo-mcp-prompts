@@ -213,3 +213,171 @@ Example bulk operations:
 - Check entity-level security
 - Review data access policies
 - Validate API permissions in Azure AD
+
+## 4. Available Prompts
+
+This repository contains specialized prompts for various D365FO operations. Each prompt provides detailed instructions for specific use cases:
+
+### Data Management Framework (DMF) Prompts
+
+#### 1. **dmf-create-export-package.prompt.md**
+Create a Data Management Framework export project with proper entity sequencing and configuration. This prompt automates the setup of export projects that can be executed to generate data packages.
+
+**Key Features:**
+- Creates DMF export project definition
+- Gets proper entity execution sequence based on dependencies
+- Adds entities to project with correct ordering
+- Supports various data formats (Excel, CSV, XML)
+
+**Use Cases:**
+- Master data export (customers, vendors, items)
+- Configuration export (parameters, settings)
+- Cross-environment migration
+
+#### 2. **dmf-execute-export-package.prompt.md**
+Execute a Data Management Framework export project and retrieve the downloadable package URL. This automates the process of running export jobs and obtaining the generated data package.
+
+**Key Features:**
+- Validates export project exists
+- Executes export to package using OData actions
+- Retrieves temporary download URL with SAS token
+- Handles asynchronous export processing
+
+**Use Cases:**
+- Generate data packages for migration
+- Create backup copies of data
+- Export data for analysis or integration
+
+#### 3. **dmf-import-data-package.prompt.md**
+Import a previously exported DMF package into a D365FO legal entity. This enables data migration, testing, and replication scenarios across environments and companies.
+
+**Key Features:**
+- Downloads package from provided URL
+- Creates import project automatically
+- Extracts and maps entities from package
+- Respects entity dependencies and execution sequence
+
+**Use Cases:**
+- Environment data migration
+- Company data replication
+- Configuration deployment
+- Test data setup
+
+#### 4. **dmf-entity-execution-sequence.prompt.md**
+Retrieve the execution sequence order for D365FO data entities used in DMF operations. This determines the correct order for importing/exporting entities based on their dependencies.
+
+**Key Features:**
+- Analyzes entity dependencies
+- Returns execution unit, level, and sequence metadata
+- Ensures referential integrity during operations
+- Supports both import and export scenarios
+
+**Use Cases:**
+- Data import planning
+- Export sequencing
+- Migration script planning
+- DMF project configuration
+
+#### 5. **dmf-monitoring-error-handling.prompt.md**
+Monitor Data Management Framework project executions and handle errors comprehensively. Provides detailed status tracking, error analysis, and error file generation for troubleshooting.
+
+**Key Features:**
+- Real-time execution status monitoring
+- Per-entity status breakdown and error analysis
+- Error file generation and download URLs
+- Message queue status tracking
+- Detailed error categorization and resolution guidance
+
+**Use Cases:**
+- Monitor large import/export operations
+- Troubleshoot failed data migrations
+- Generate error reports for data quality
+- Automate error correction workflows
+
+### Document Management Prompts
+
+#### 6. **download-customer-invoices.prompt.md**
+Download customer invoices from D365 Finance & Operations using the SRS (SQL Server Reporting Services) framework.
+
+**Key Features:**
+- Downloads sales invoices by invoice ID and legal entity
+- Uses RunCopilotReport action with SalesInvoiceController
+- Supports PDF generation and download
+
+**Use Cases:**
+- Generate customer invoice PDFs
+- Automate invoice distribution
+- Create invoice archives
+
+#### 7. **download-srs.prompt.md**
+Download various SRS documents from D365 Finance & Operations including invoices, confirmations, and purchase orders.
+
+**Key Features:**
+- Supports multiple document types (sales invoices, confirmations, purchase orders)
+- Handles different controllers for each document type
+- Provides comprehensive error handling
+
+**Use Cases:**
+- Generate financial documents
+- Automate document workflows
+- Create document archives
+- Support customer self-service portals
+
+### System Administration Prompts
+
+#### 8. **send-notifications.prompt.md**
+Send system notifications to specific users or all users in D365FO with various notification types and configurations.
+
+**Key Features:**
+- Creates system notifications with title, message, and metadata
+- Supports different notification types (Alert, ApplicationNotification, WhatsNew)
+- Configurable severity levels and expiration dates
+- Associates notifications with specific users
+
+**Use Cases:**
+- System maintenance announcements
+- Important updates and alerts
+- User communication and training
+- Change management notifications
+
+#### 9. **whoami.prompt.md**
+Get comprehensive current user information and context from D365 Finance & Operations including identity, admin status, and detailed profile information.
+
+**Key Features:**
+- Quick user identity verification
+- Admin privileges detection
+- Detailed user profile information
+- Security role assignments
+- Environment context information
+
+**Use Cases:**
+- User identity verification
+- Permission troubleshooting
+- Security auditing
+- Environment validation
+- User onboarding support
+
+## 5. How to Use These Prompts
+
+### Option 1: Direct Integration
+Copy and paste the prompt content into your GitHub Copilot chat or VS Code when working with the D365FO MCP server.
+
+### Option 2: Reference Guide
+Use the prompts as reference documentation when building your own D365FO automation scripts and workflows.
+
+### Option 3: Template Customization
+Modify the prompts to fit your specific business requirements and environment configurations.
+
+### Best Practices
+1. **Sequential Operations**: Use DMF prompts in sequence (create → execute → monitor)
+2. **Error Handling**: Always implement comprehensive error handling as shown in the prompts
+3. **Environment Awareness**: Validate environment and permissions before executing operations
+4. **Data Validation**: Verify data integrity and dependencies before importing
+5. **Progress Monitoring**: Use monitoring prompts for long-running operations
+
+## Additional Resources
+
+- See individual prompt files in `.github/prompts/` for detailed implementation guides
+- D365FO Data Management Framework documentation
+- OData Actions documentation for specific D365FO operations
+- MCP server configuration and setup guides

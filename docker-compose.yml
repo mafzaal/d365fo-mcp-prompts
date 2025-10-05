@@ -1,6 +1,6 @@
 services:
   d365fo-mcp-server:
-    image: ghcr.io/mafzaal/d365fo-client:v0.3.0
+    image: ghcr.io/mafzaal/d365fo-client:latest
     container_name: d365fo-mcp-server
     env_file:
       - .env
