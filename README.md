@@ -375,9 +375,52 @@ Modify the prompts to fit your specific business requirements and environment co
 4. **Data Validation**: Verify data integrity and dependencies before importing
 5. **Progress Monitoring**: Use monitoring prompts for long-running operations
 
+## 6. Local AI Setup with Gemma3 and LangGraph
+
+For users who prefer running AI models locally or need offline capabilities, we provide a comprehensive tutorial for setting up D365FO report downloading using Gemma3 with LMStudio and LangGraph.
+
+### Tutorial: Local AI-Powered Report Downloads
+
+📖 **[Complete Tutorial: D365FO Reports with Gemma3 + LMStudio + LangGraph](langgraph-ssrs-download-agent/d365fo_ssrs_download_agent.ipynb)**
+
+This tutorial covers:
+
+- **Local LLM Setup**: Installing and configuring LMStudio with Gemma3
+- **LangGraph Agents**: Building intelligent agents for D365FO operations
+- **Natural Language Interface**: Interact with D365FO using conversational AI
+- **Offline Capabilities**: Run completely offline after initial setup
+- **Advanced Features**: Batch processing, custom integrations, and optimization
+
+### Key Benefits of Local Setup
+
+- 🔒 **Privacy**: All processing happens locally
+- 🚀 **Performance**: No API rate limits or external dependencies
+- 💰 **Cost-Effective**: No per-request charges
+- 🔧 **Customizable**: Full control over model behavior and responses
+- 📱 **Offline Ready**: Works without internet connectivity
+
+### Quick Start - Local AI Setup
+
+1. **Install LMStudio** from [lmstudio.ai](https://lmstudio.ai/)
+2. **Download Gemma3 Model** (2B, 9B, or 27B parameters)
+3. **Clone this repository** and follow the tutorial
+4. **Configure D365FO credentials** using environment variables
+5. **Start the LangGraph agent** and begin downloading reports with natural language
+
+Example interactions:
+```
+💬 "Download sales invoice CIV-000205 from USMF"
+💬 "Download free text invoice FTI-000001 from USMF"
+💬 "Download sales confirmations CCF-00000060 for USMF "
+💬 "Export purchase order PO-123456 as PDF"
+```
+
+The local AI agent handles authentication, API calls, PDF generation, and file management automatically.
+
 ## Additional Resources
 
 - See individual prompt files in `.github/prompts/` for detailed implementation guides
+- **[Local AI Tutorial](langgraph-ssrs-download-agent/d365fo_ssrs_download_agent.ipynb)** for Gemma3 + LMStudio + LangGraph setup
 - D365FO Data Management Framework documentation
 - OData Actions documentation for specific D365FO operations
 - MCP server configuration and setup guides

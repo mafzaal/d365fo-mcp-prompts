@@ -1,1 +1,3 @@
 Reports/
+.venv/
+.env
