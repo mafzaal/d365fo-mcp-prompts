@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.13"
 resolution-markers = [
     "python_full_version >= '3.14'",
@@ -440,6 +440,7 @@ dependencies = [
     { name = "ipykernel" },
     { name = "langchain" },
     { name = "langchain-google-genai" },
+    { name = "langchain-mcp-adapters" },
     { name = "langchain-openai" },
     { name = "langgraph" },
 ]
@@ -450,6 +451,7 @@ requires-dist = [
     { name = "ipykernel", specifier = ">=6.30.1" },
     { name = "langchain", specifier = ">=1.0.0a14" },
     { name = "langchain-google-genai", specifier = ">=2.1.12" },
+    { name = "langchain-mcp-adapters", specifier = ">=0.1.11" },
     { name = "langchain-openai", specifier = ">=0.3.34" },
     { name = "langgraph", specifier = ">=1.0.0a4" },
 ]
@@ -989,6 +991,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b6/db/0a952b3bac49aede60267d9703ee6aa1403cf78479315e88054e1ae9fd68/langchain_google_genai-3.0.0a1.tar.gz", hash = "sha256:69707bef46ed30dd64904502d36a769b1ffcad24505429733b1b4e70482f36fd", size = 91157, upload-time = "2025-09-30T05:11:28.823Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/ce/efd21ef1c3243da5db12d2e6919640284f5b3c93a24ffd5b30503b718ca3/langchain_google_genai-3.0.0a1-py3-none-any.whl", hash = "sha256:e3a8e8253fb75f81fe561379ee378ce21fe11da74fea9eba6386a926eb201113", size = 57530, upload-time = "2025-09-30T05:11:27.619Z" },
+]
+
+[[package]]
+name = "langchain-mcp-adapters"
+version = "0.1.11"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "mcp" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ac/4e/b84af2e379edfb51db78edcfc6eab7dca798f2ce9d74b73e29f5f207685c/langchain_mcp_adapters-0.1.11.tar.gz", hash = "sha256:a217c49086b162344749f7f99a148fc12482e2da8e0260b2e35fc93afb31b38d", size = 23061, upload-time = "2025-10-03T14:53:13.98Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1e/cc/5f9b23cce308b2c30246e31712bf1a53ae49d97bab8b3d9bc9cfe364f82c/langchain_mcp_adapters-0.1.11-py3-none-any.whl", hash = "sha256:7b35921e9487bcb3ea3d94bf10341316ac897e2997e8a16032ae514834a9685d", size = 15751, upload-time = "2025-10-03T14:53:12.358Z" },
 ]
 
 [[package]]
