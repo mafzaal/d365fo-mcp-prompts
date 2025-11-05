@@ -228,7 +228,7 @@ Attach the original PDF/image to the invoice header:
     "dataAreaId": "USMF",
     "HeaderReference": "<header_reference_from_step_4>",
     "TypeId": "File",
-    "FileName": "<original_filename.pdf>",
+    "FileName": "<original_filename_without_extension>",
     "Name": "Source Invoice Document",
     "FileContents": "<base64_encoded_file_content>",
     "FileType": "pdf",
