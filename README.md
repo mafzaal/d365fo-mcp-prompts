@@ -194,7 +194,52 @@ Example bulk operations:
 - **System Administration**: Monitor and maintain D365FO environments
 - **Development**: Prototype and test new functionality
 
-### Troubleshooting
+## 4. Skills & Examples
+
+This repository includes comprehensive skill guides and examples for common D365FO operations:
+
+### Available Skills
+
+#### [Expense Submission Skill](./skills/d365fo-expense-submission/SKILL.md)
+Complete guide for submitting expenses in D365 F&O, including:
+- Creating expense reports and expense lines
+- Uploading and attaching receipts
+- Itemizing expenses (splitting into multiple lines)
+- Auto-matching credit card transactions
+- Workflow submission and approval
+- Real-world scenarios: meals, hotel, mileage, per diem
+- Best practices and troubleshooting
+
+**Quick Example:**
+```python
+# Create a simple expense
+expense = create_expense_line({
+    "TransactionDate": "2026-04-18T00:00:00Z",
+    "ExpenseCategory": "MEALS",
+    "Description": "Client dinner",
+    "Amount": 125.50,
+    "CurrencyCode": "USD",
+    "PayMethod": "CREDITCARD"
+})
+```
+
+See [skills/README.md](./skills/README.md) for all available skills.
+
+### Example Scripts
+
+The `skills/` directory contains practical Python examples demonstrating:
+- Complete expense submission workflows
+- Receipt upload and attachment
+- Expense itemization
+- Report creation and submission
+- Multi-scenario demonstrations
+
+Run the expense submission example:
+```bash
+python skills/d365fo-expense-submission/expense_submission_example.py
+```
+
+## 5. Troubleshooting
 
 **Connection Issues:**
 - Verify authentication credentials
